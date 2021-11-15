@@ -30,8 +30,8 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">https://old-fly-61.loca.lt</stringProp>
-          <stringProp name="HTTPSampler.port">443</stringProp>
+          <stringProp name="HTTPSampler.domain">d023-103-212-143-112.ngrok.io</stringProp>
+          <stringProp name="HTTPSampler.port">80</stringProp>
           <stringProp name="HTTPSampler.connect_timeout"></stringProp>
           <stringProp name="HTTPSampler.response_timeout"></stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
