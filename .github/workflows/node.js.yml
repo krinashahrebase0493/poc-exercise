@@ -80,7 +80,7 @@ jobs:
           npm run loadtest
       - name: View reports
         run: |
-          < aggregatereport
+          cat aggregatereport
 
   # loadtest : 
   #   runs-on: ubuntu-latest
