@@ -83,8 +83,8 @@ jobs:
           outputReportsFolder: ./reports/
           args: "--loglevel INFO"
       - name: View reports
+        uses: rhysd/action-setup-vim@v1
         run : |
-          
           ls
-          cd reports
-          ls
+          vim aggregatereport
+      
