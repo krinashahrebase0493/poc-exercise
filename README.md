@@ -10,9 +10,8 @@
     - Now the application should be available on `localhost:3000`
 7. To check the swagger documentation visit `localhost:3000/api-docs`
 8. Working of the application :
-    - two endpoints are provided [POST] `/convert/file/`
-    and [GET] `/convert/file/{filename}`
+    - one endpoint is provided [POST] `/convert/file/`
     - [POST] `/convert/file` must have csv file attachment with field name `file`
-    - [POST] `/convert/file` will return file name if converted successfully
-    - [GET] `/convert/file/{filename}` replace {filename} with the file name received from previous endpoint
-    - [GET] `/convert/file/{filename}` will return the text/csv file if successful
+    - [POST] `/convert/file` will return downloadable csv file if converted successfully
+9. Linting, Building & Testing is happening via GitActions 
+   everytime a push is done the master branch

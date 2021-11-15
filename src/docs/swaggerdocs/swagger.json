@@ -33,44 +33,6 @@
                     "200": {
                         "description": "success response with file name",
                         "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/convertsuccess"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "failure response",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/convertfailure"
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        "/convert/file/{filename}": {
-            "get": {
-                "description": "get converted csv file",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "filename",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "filename which was received after successfully converting the data"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "success response with converted file",
-                        "content": {
                             "text/csv": {
                                 "schema": {
                                     "type": "string"
@@ -93,31 +55,6 @@
                                 }
                             }
                         }
-                    }
-                }
-            }
-        }
-    },
-    "components": {
-        "schemas": {
-            "convertsuccess": {
-                "type": "object",
-                "properties": {
-                    "filename": {
-                        "type": "string"
-                    },
-                    "data": {
-                        "type": "string",
-                        "description": "Response value."
-                    }
-                }
-            },
-            "convertfailure": {
-                "type" : "object",
-                "properties": {
-                    "data": {
-                        "type": "string",
-                        "description": "Error message."
                     }
                 }
             }

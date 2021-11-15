@@ -73,7 +73,7 @@
               <assertions>true</assertions>
               <subresults>true</subresults>
               <responseData>false</responseData>
-              <samplerData>false</samplerData>
+              <samplerData>true</samplerData>
               <xml>false</xml>
               <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
@@ -107,7 +107,7 @@
               <assertions>true</assertions>
               <subresults>true</subresults>
               <responseData>false</responseData>
-              <samplerData>false</samplerData>
+              <samplerData>true</samplerData>
               <xml>false</xml>
               <fieldNames>true</fieldNames>
               <responseHeaders>false</responseHeaders>
