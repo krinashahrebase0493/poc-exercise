@@ -78,6 +78,7 @@ jobs:
         run: |
           npm run loadtest
       - name: View reports
+        run: |
           < aggregatereport
 
   # loadtest : 
