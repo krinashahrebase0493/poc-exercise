@@ -73,7 +73,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install JMeter
         run: |
-          sudo apt-get install JMeter
+          sudo apt-get update
+          sudo apt-get install jmeter
       - name: Run loadtest
         run: |
           npm run loadtest
