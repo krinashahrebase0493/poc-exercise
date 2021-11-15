@@ -44,8 +44,8 @@
           <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
           <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
             <collectionProp name="HTTPFileArgs.files">
-              <elementProp name="/home/anish/Documents/rebaseprojects/poc-excercise/mockdata/sample.csv" elementType="HTTPFileArg">
-                <stringProp name="File.path">/home/anish/Documents/rebaseprojects/poc-excercise/mockdata/sample.csv</stringProp>
+              <elementProp name="/home/runner/work/poc-exercise/poc-exercise/mockdata/sample.csv" elementType="HTTPFileArg">
+                <stringProp name="File.path">/home/runner/work/poc-exercise/poc-exercise/mockdata/sample.csv</stringProp>
                 <stringProp name="File.paramname">file</stringProp>
                 <stringProp name="File.mimetype">text/csv</stringProp>
               </elementProp>
