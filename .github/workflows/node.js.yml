@@ -75,7 +75,7 @@ jobs:
     needs : [build-and-test]
     steps:
       - uses: actions/checkout@v2
-
+      - uses: rhysd/action-setup-vim@v1
       - name: Run JMeter Action
         uses: rbhadti94/apache-jmeter-action@v0.3.1
         with:
@@ -83,7 +83,6 @@ jobs:
           outputReportsFolder: ./reports/
           args: "--loglevel INFO"
       - name: View reports
-        uses: rhysd/action-setup-vim@v1
         run : |
           ls
           vim aggregatereport
