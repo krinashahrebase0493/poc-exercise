@@ -84,5 +84,7 @@ jobs:
           args: "--loglevel INFO"
       - name: View reports
         run : |
+          
+          ls
           cd reports
           ls
