@@ -78,9 +78,11 @@ jobs:
       - name: Run loadtest
         run: |
           npm run loadtest
-      - name: View reports
+      - name: Verify reports
         run: |
-          cat aggregatereport
+          npm install
+          npm run build
+          npm run loadtestverify
 
   # loadtest : 
   #   runs-on: ubuntu-latest
