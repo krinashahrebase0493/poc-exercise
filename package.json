@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./src -c ./src/.eslintrc.json --ext ts,tsx",
-    "loadtest": "jmeter -n -t pocexcercise.jmx",
-    "loadtestverify": "mocha --recursive ./dist/loadtest --exit",
+    "loadtest": "locust -f ./src/loadtest/test.py --headless -u 100 -r 10 --run-time 10s --stop-timeout 20 --csv=loadtest",
+    "loadtestverify": "ts-mocha -p ./src/tsconfig.json --recursive ./src/loadtest/**/*.test.ts --exit",
     "test": "ts-mocha -p ./src/tsconfig.json --recursive ./src/test/**/*.test.ts --exit",
     "build": "tsc -p src",
     "start": "node ./dist"
