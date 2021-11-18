@@ -1,11 +1,10 @@
 import { Request, Response } from 'express';
 import { spawn } from 'child_process';
-import path from 'path';
 import deleteFile from '../../utils/deleteFile';
 
-const pivotCsv = async (csvPath : string, fileName : string, convertPath : string) : Promise<any> => new Promise((resolve, reject) => {
+const pivotCsv = async (csvPath : string) : Promise<any> => new Promise((resolve, reject) => {
   // Calls the python script to convert the csv file
-  const pyout = spawn('python', ['pyscripts/pivotCsv.py', csvPath, fileName, convertPath]);
+  const pyout = spawn('python', ['pyscripts/pivotCsv.py', csvPath]);
 
   // On python script success
   pyout.stdout.on('data', (data) => {
@@ -21,13 +20,13 @@ const pivotCsv = async (csvPath : string, fileName : string, convertPath : strin
 const convertFile = async (req : Request, res : Response) => {
   const filepath = req.file?.path;
   const filename = req.file?.filename;
+  const originalName = req.file?.originalname;
   try {
-    if (filepath && filename) {
+    if (filepath && filename && originalName) {
       // call the function to convert the csv
-      await pivotCsv(filepath, path.resolve(`dist/uploads/converted/${filename}`), path.resolve('dist/uploads/converted/'));
-      const convertedpath = path.resolve(`dist/uploads/converted/${filename}`);
-      // send the converted file and delete it
-      res.download(convertedpath, () => { deleteFile(convertedpath); });
+      const resp = await pivotCsv(filepath);
+      // send the converted data as file
+      res.attachment(originalName).send(resp);
       // delete the original file
       deleteFile(filepath);
     } else {
