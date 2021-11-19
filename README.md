@@ -3,7 +3,7 @@
 2. To build the project run command `npm run build`
 3. To run test cases run command `npm run test`
 4. To start the server locally run command `npm run start`
-5. To run loadtest first install `jmeter` to your system 
+5. To run loadtest first install `locust` to your system 
    and run command `npm run loadtest`
 6. To verify loadtest report run command `npm run loadtestverify`
 7. To run the application with docker :
@@ -19,5 +19,5 @@
    everytime a push is done the master branch
 
 **NOTE**
-> The JMETER test is using a ngrok url which was deployed from a localserver which can be later replaced with the original server. The CICD pipeline will stop further execution if the given performance conditions are not met.
+> The LOCUST test is using a ngrok url which was deployed from a localserver which can be later replaced with the original server. The CICD pipeline will stop further execution if the given performance conditions are not met.
 
